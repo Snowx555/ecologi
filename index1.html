@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Карта углеродного следа</title>
-  <!-- Убраны пробелы в конце URL -->
+  <!-- 🔥 ИСПРАВЛЕНО: УБРАНЫ ПРОБЕЛЫ В КОНЦЕ URL -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
@@ -229,7 +229,6 @@
       border-radius: 16px;
     }
 
-    /* Полное скрытие атрибуции Leaflet */
     .leaflet-control-attribution {
       display: none !important;
     }
@@ -308,7 +307,7 @@
     <p>Данные: Our World in Data, Global Carbon Atlas | © 2025 Карта углеродного следа</p>
   </footer>
 
-  <!-- Убраны пробелы в конце URL -->
+  <!-- 🔥 ИСПРАВЛЕНО: УБРАНЫ ПРОБЕЛЫ В КОНЦЕ URL -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script>
     const countryStats = {
@@ -370,13 +369,12 @@
       document.getElementById('result').style.display = 'none';
     }
 
-    // ✅ ИСПРАВЛЕНО: используем конкретный цвет, а не CSS-переменную
     L.geoJSON(simplifiedGeoJSON, {
       style: { 
         fillColor: "#e8f5e9", 
         weight: 1.4, 
         opacity: 1, 
-        color: "#2e7d32", // ← было: var(--primary) → заменено
+        color: "#2e7d32",
         fillOpacity: 0.45 
       },
       onEachFeature: (feature, layer) => {
